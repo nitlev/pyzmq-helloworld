@@ -14,9 +14,10 @@ socket = context.socket(zmq.REQ)
 socket.connect("tcp://192.168.0.17:5555")
 
 #  Do 10 requests, waiting each time for a response
-for request in ["Yo", 1, 22, 3.14, datetime.now()]:
-    print("Sending request %s …" % request)
-    socket.send_pyobj(request)
+requests = []
+for request in requests:
+    print("Sending request …")
+    socket.send_json()
 
     #  Get the reply.
     message = socket.recv()

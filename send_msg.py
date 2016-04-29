@@ -16,7 +16,7 @@ socket.connect("tcp://192.168.0.17:5555")
 #  Do 10 requests, waiting each time for a response
 for request in ["Yo", 1, 22, 3.14, datetime.now()]:
     print("Sending request %s …" % request)
-    socket.send(b"Hello")
+    socket.send_pyobj(request)
 
     #  Get the reply.
     message = socket.recv()

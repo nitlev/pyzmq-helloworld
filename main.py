@@ -17,7 +17,7 @@ def main():
         time.sleep(1)
 
         #  Send reply back to client
-        socket.send("Received request: %s" % message)
+        socket.send_pyobj(message)
 
 if __name__ == '__main__':
     main()

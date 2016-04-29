@@ -1,4 +1,3 @@
-import time
 import zmq
 import pandas as pd
 from model import Model
@@ -25,5 +24,7 @@ def main():
 
         #  Send reply back to client
         socket.send(b"%s" % prediction)
+
+
 if __name__ == '__main__':
     main()

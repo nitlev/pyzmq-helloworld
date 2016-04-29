@@ -3,7 +3,7 @@
 #   Connects REQ socket to tcp://localhost:5555
 #   Sends "Hello" to server, expects "World" back
 #
-from datetime import datetime
+from sklearn.datasets import load_iris
 import zmq
 
 context = zmq.Context()
@@ -14,11 +14,13 @@ socket = context.socket(zmq.REQ)
 socket.connect("tcp://192.168.0.17:5555")
 
 #  Do 10 requests, waiting each time for a response
-requests = []
-for request in requests:
+datasets = load_iris()
+data = datasets['data']
+
+for row in data:
     print("Sending request …")
-    socket.send_json()
+    socket.send_json(row.tolist())
 
     #  Get the reply.
     message = socket.recv()
-    print("Received reply %s [ %s ]" % (request, message))
+    print("Received reply : %s" % message)

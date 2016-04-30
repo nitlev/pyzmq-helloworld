@@ -1,3 +1,5 @@
 pyzmq
 pandas
 scikit-learn
+pytest
+mock

@@ -1,6 +1,6 @@
 pyzmq
-scipy
 numpy
+scipy
 pandas
 scikit-learn
 pytest

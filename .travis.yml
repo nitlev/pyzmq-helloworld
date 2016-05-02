@@ -5,6 +5,9 @@ language: python
 python:
   - '3.4'
 
+virtualenv:
+  system_site_packages: true
+
 addons:
   apt:
     packages:
@@ -12,9 +15,9 @@ addons:
       - liblapack-dev
       - libatlas-base-dev
       - gfortran
-      - python-numpy
-      - python-scipy
-      - python-pandas
+
+before_install:
+  - sudo apt-get install -qq python-numpy python-scipy python-pandas
 
 install:
   - pip install .

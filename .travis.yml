@@ -1,6 +1,18 @@
 language: python
 python:
   - "3.5"
+
+addons:
+  apt:
+    packages:
+      - python-numpy
+      - python-scipy
+      - python-matplotlib
+      - ipython
+      - ipython-notebook
+      - python-pandas
+      - python-sympy
+      - python-nose
 # command to install dependencies
 install:
   - pip install -r requirements.txt

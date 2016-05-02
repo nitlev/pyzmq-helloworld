@@ -26,5 +26,4 @@ setup(name='helloworld',
       packages=find_packages(),
       package_data={
           'model': ['model'],
-      },
-      )
+      })

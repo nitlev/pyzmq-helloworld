@@ -1,3 +1,4 @@
+from __future__ import print_function
 from time import time
 from datetime import timedelta
 from sklearn.datasets import load_iris
@@ -8,7 +9,7 @@ def get_socket():
     context = zmq.Context()
 
     #  Socket to talk to server
-    print("Connecting to hello world server…")
+    print("Connecting to hello world server...")
     socket = context.socket(zmq.REQ)
     return socket
 

@@ -3,6 +3,7 @@
 
 [pytest]
 .cache
+__pycache__
 
 [build]
 build

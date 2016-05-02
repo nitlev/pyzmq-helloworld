@@ -1,20 +1,21 @@
 language: python
+
 python:
-  - "3.5"
+  - '3.5'
 
 addons:
   apt:
     packages:
-      - python-numpy
-      - python-scipy
-      - python-matplotlib
-      - ipython
-      - ipython-notebook
-      - python-pandas
-      - python-sympy
-      - python-nose
-# command to install dependencies
-install:
+      - libblas-dev
+      - liblapack-dev
+      - libatlas-base-dev
+      - gfortran
+
+
   - pip install -r requirements.txt
-# command to run tests
+
 script: py.test tests.py
+
+notifications:
+  slack:
+    secure: kr9OFH02aMuBD6j4qqbVm6XaS8xMGI0Ph/MjfY2ntMymfWQd/c4dlMDuFcJBapF3/+Ur9/7hAXNCfhL47x5MevEv8QVvsV/K/XaTimghrMPyCY+h5qnSW67+OJ1JalcHIu1IHuOSvLYJ1uPegv4Vc5BjiYsYFpGqWziag07oCymqeeds+Af1D49BYHWiCzH7IEyVr40AsvF3Z46JFi2loTa6m+LmDwMlcbszrYkHcfplEMK2gxxX9IXhGweqvCUJu94mASc3r5YtAxsi0h7BhvZB32GggvRYYJ4t3o+VB35NJAi3iBSv2NJj8NpEcPkwFz+wDKK9NsAb5E6X9/kjGDGChaE7VCVSHNsdz0nkw3uDxSHelvDBF8shHJiV1o9ngKD59RrQsiKyvDtotPrL21XEOI3Gdp7bDNFLdkAvq4m93jbpA47Eo2uLU4pthBNrYwihUJEWwzM9A6pYEU6X0G9yXfy/II+EEkFl8zRKO9rPUwlDb0Hv9S8Vsgep42ca6v2hIVcQzILAxyWfgo9kuq7UWoW0NCgah1ofMsxOZMSTKlnKCrP2FfAi/q98zuUfZLRcGFennnp3rPPKaaDm+qRCWbGQIRYsFDsJs3LDTL3nMCGbKP924YVEHxtdcN+o8Z0n83U5Fi995FRB7SOv7XE69BW/xA4zOqlJro8Ttpk=

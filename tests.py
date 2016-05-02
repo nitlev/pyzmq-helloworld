@@ -1,6 +1,7 @@
 from mock import MagicMock
-from send_msg import get_socket, send_message
 from zmq import Socket
+
+from helloworld.send_msg import get_socket, send_message
 
 
 class TestCase:

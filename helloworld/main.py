@@ -1,6 +1,7 @@
-import zmq
 import pandas as pd
-from model import Model
+import zmq
+
+from helloworld.model import Model
 
 
 def main():
@@ -8,7 +9,7 @@ def main():
     socket = context.socket(zmq.REP)
     socket.bind("tcp://*:5555")
 
-    model = Model("model")
+    model = Model("../model")
 
     while True:
         #  Wait for next request from client

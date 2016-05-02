@@ -14,7 +14,7 @@ def get_socket():
 
 
 def send_message(socket, address):
-    socket.connect()
+    socket.connect(address)
 
     datasets = load_iris()
     data = datasets['data']
